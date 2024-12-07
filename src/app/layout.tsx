@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../styles/globals.css";
+import HeaderSection from "@/components/layout/header";
+import FooterSection from "@/components/layout/footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const rethinkSans = localFont({
+  src: "./fonts/RethinkSans.woff",
+  variable: "--font-rethink-sans",
   weight: "100 900",
 });
 
@@ -24,11 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      style={{ ...rethinkSans.style }}
+      className="bg-black"
+    >
+      <body className="relative max-w-[1920px] mx-auto">
+        <HeaderSection />
         {children}
+        <FooterSection />
       </body>
     </html>
   );
