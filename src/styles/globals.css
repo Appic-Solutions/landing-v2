@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* swiper */
+.swiper-wrapper {
+  height: auto !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-wrapper {
+    height: 100% !important;
+  }
+}
