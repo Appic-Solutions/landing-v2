@@ -28,7 +28,7 @@ export default function HeaderSection() {
       <ul
         className={cn(
           "fixed bottom-3.5 right-6 left-6 z-[99]",
-          "border-[1.63px] border-white/30 text-white rounded-full",
+          "border-[1.63px] border-white/30 text-white rounded-full backdrop-blur-[102px]",
           "bg-[radial-gradient(75.61%_136.07%_at_48.06%_0%,rgba(255,255,255,0.6)_0%,rgba(255,255,255,0)_100%)]",
           "grid grid-cols-4 items-center gap-x-1 py-1.5 px-3 h-[62px]",
           "lg:w-full lg:max-w-[596px] lg:mx-auto lg:static lg:col-span-8",
