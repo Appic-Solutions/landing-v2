@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ParkOutlineBridgeIcon } from "../icons";
+import CustomCard from "../shared/card";
 
 export default function TokenomicsSection() {
   return (
@@ -54,14 +55,22 @@ export default function TokenomicsSection() {
       >
         <div
           className={cn(
-            "xl:col-span-2 xl:row-start-2 xl:gap-y-10 xl:mx-auto rounded-[40px]",
-            "flex items-center justify-center bg-[linear-gradient(124.44deg,#4C4C4C_18.37%,rgba(57,57,57,_0.3)_70.34%)] p-0.5"
-          )}
-        >
+            "flex items-center justify-center relative overflow-hidden rounded-[40px] text-white",
+
+            "before:contents-[''] before:absolute before:top-1/2 before:w-[100px] before:h-[300px] before:z-0",
+            "before:translate-x-0 before:translate-y-0 before:origin-top before:animate-border-rotate",
+            "before:bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(102,102,102,0.75)_50%,rgba(255,255,255,0)_100%)]",
+
+            "after:contents-[''] after:absolute after:top-1/2 after:w-[100px] after:h-[300px] after:z-0",
+            "after:translate-x-0 after:translate-y-0 after:origin-top after:animate-[border-rotate_6s_linear_forwards_infinite]",
+            "after:bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(102,102,102,0.75)_50%,rgba(255,255,255,0)_100%)]",
+
+            "xl:col-span-2 xl:row-start-2 xl:gap-y-10 xl:mx-auto",
+          )}>
           <div
             className={cn(
-              "w-full flex flex-col items-center justify-center gap-y-8 rounded-[40px] py-10 max-w-[399px]",
-              "bg-[linear-gradient(180deg,rgba(18,18,18,_0.8)_0%,rgba(33,33,33,_0.24)_100%),linear-gradient(0deg,rgba(255,255,255,_0.04),rgba(255,255,255,_0.04))]",
+              "w-full flex flex-col items-center justify-center gap-y-8 rounded-[40px] py-10 max-w-[399px] z-10 m-0.5",
+              "bg-[linear-gradient(180deg,rgba(18,18,18,1)_0%,rgba(33,33,33,1)_100%),linear-gradient(0deg,rgba(255,255,255,1),rgba(255,255,255,1))]",
               "xl:py-12"
             )}
           >
@@ -102,8 +111,9 @@ export default function TokenomicsSection() {
           </p>
           <button
             className={cn(
-              "w-[238px] h-[60px] text-white rounded-[20px]",
-              "bg-[linear-gradient(90deg,#1C68F8_0%,#1753C5_71.5%,#113D92_100%),linear-gradient(318.8deg,rgba(255,255,255,0)_35.19%,rgba(255,255,255,0.3)_92.55%)]"
+              "w-[238px] h-[60px] text-white rounded-[20px] duration-200",
+              "bg-[linear-gradient(90deg,#1C68F8_0%,#1753C5_71.5%,#113D92_100%),linear-gradient(318.8deg,rgba(255,255,255,0)_35.19%,rgba(255,255,255,0.3)_92.55%)]",
+              "hover:ring-2 hover:ring-[#113D92] hover:shadow-[0_0_20px_5px_#113D92]"
             )}
           >
             Try Swap
@@ -117,33 +127,13 @@ export default function TokenomicsSection() {
           )}
         >
           {Array.from({ length: 3 }).map((_, idx) => (
-            <div
+            <CustomCard
               key={idx}
-              className={cn(
-                "flex items-center justify-center p-0.5 rounded-[20px]",
-                "bg-[linear-gradient(124.44deg,#4C4C4C_18.37%,rgba(57,57,57,_0.3)_70.34%)]",
-                idx === 2 && "xl:col-start-2 xl:col-end-3"
-              )}
-            >
-              <div
-                className={cn(
-                  "flex flex-col gap-y-5 w-full h-full px-5 py-4 rounded-[20px] text-white",
-                  "bg-[linear-gradient(180deg,rgba(18,18,18,_0.8)_0%,rgba(33,33,33,_0.24)_100%),linear-gradient(0deg,rgba(255,255,255,_0.08),rgba(255,255,255,_0.08))]"
-                )}
-              >
-                <div className="flex items-center justify-between">
-                  <p className="text-[18px] font-bold">Number Of {idx + 1}</p>
-                  <span className="h-8 w-8 bg-white text-black rounded-full flex items-center justify-center">
-                    <ParkOutlineBridgeIcon />
-                  </span>
-                </div>
-
-                <p className="">
-                  Lorem ipsum dolor sit amet consectetur. Lectus elit at euismod
-                  interdum gravida.
-                </p>
-              </div>
-            </div>
+              title={`Number Of ${idx + 1}`}
+              description="Lorem ipsum dolor sit amet consectetur. Lectus elit at euismod interdum gravida."
+              icon={<ParkOutlineBridgeIcon />}
+              className={idx === 2 ? "xl:col-start-2 xl:col-end-3" : ""}
+            />
           ))}
         </div>
       </div>

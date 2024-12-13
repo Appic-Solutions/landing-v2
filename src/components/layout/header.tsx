@@ -90,9 +90,10 @@ export default function HeaderSection() {
       <Link
         href=""
         className={cn(
-          "text-white border-[1.5px] border-white/30 col-span-2 justify-self-end backdrop-blur-[102px]",
+          "text-white border-[1.5px] border-white/30 col-span-2 justify-self-end backdrop-blur-[102px] duration-200",
           "bg-[radial-gradient(75.61%_136.07%_at_48.06%_0%,rgba(255,255,255,0.6)_0%,rgba(255,255,255,0)_100%)]",
-          "flex items-center justify-center gap-x-1 text-sm font-semibold h-12 rounded-full w-[160px]"
+          "flex items-center justify-center gap-x-1 text-sm font-semibold h-12 rounded-full w-[160px]",
+          "hover:shadow-[0_0_20px_0_rgba(255,255,255,0.3)]"
         )}>
         <ArrowUpRightIcon width={14} height={14} />
         Join our discord

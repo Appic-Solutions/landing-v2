@@ -45,7 +45,7 @@ export default function FrequentlySection() {
             <div
               key={idx}
               className={cn(
-                "flex items-center justify-between gap-x-4 px-8 py-6 rounded-[24px] text-black",
+                "flex items-center justify-between gap-x-4 px-8 py-6 rounded-[24px] text-black cursor-pointer",
                 "bg-[linear-gradient(90deg,rgba(217,217,217,_0.7)_0%,rgba(115,115,115,_0.9)_100%)]",
                 "xl:text-[24px] xl:font-semibold xl:leading-[31px]",
                 activeFaq === idx && "bg-[linear-gradient(159.81deg,_#1343A0_-34.87%,rgba(19,67,160,_0.5)_151.64%)] text-white font-bold"
@@ -71,7 +71,7 @@ export default function FrequentlySection() {
             key={idx}
             className={cn(
               "flex flex-col gap-y-5 px-8 py-6 bg-[#42424280] rounded-[10px]",
-              "text-[18px] leading-[31px] text-white cursor-pointer duration-200",
+              "leading-[31px] text-white cursor-pointer duration-200",
               "md:text-[24px]",
               activeFaqItem === idx ? "min-h-fit bg-[#1343A0] backdrop-blur-[27px] drop-shadow-[0_3px_20px_5px_#651FFF33]" : "h-20 overflow-hidden"
 

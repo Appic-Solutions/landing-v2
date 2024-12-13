@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ParkOutlineBridgeIcon } from "../icons";
+import CustomCard from "../shared/card";
 
 export default function FeaturesSection() {
   return (
@@ -42,32 +43,12 @@ export default function FeaturesSection() {
           "md:grid-cols-2"
         )}>
           {Array.from({ length: 6 }).map((_, idx) => (
-            <div
+            <CustomCard
               key={idx}
-              className={cn(
-                "flex items-center justify-center p-0.5 rounded-[20px]",
-                "bg-[linear-gradient(124.44deg,#4C4C4C_18.37%,rgba(57,57,57,_0.3)_70.34%)]"
-              )}
-            >
-              <div
-                className={cn(
-                  "flex flex-col gap-y-5 w-full h-full p-5 rounded-[20px] text-white",
-                  "bg-[linear-gradient(180deg,rgba(18,18,18,_0.8)_0%,rgba(33,33,33,_0.24)_100%),linear-gradient(0deg,rgba(255,255,255,_0.08),rgba(255,255,255,_0.08))]"
-                )}
-              >
-                <div className="flex items-center justify-between">
-                  <p className="text-[18px] font-bold">Number Of {idx + 1}</p>
-                  <span className="h-8 w-8 bg-white text-black rounded-full flex items-center justify-center">
-                    <ParkOutlineBridgeIcon />
-                  </span>
-                </div>
-
-                <p className="">
-                  Lorem ipsum dolor sit amet consectetur. Lectus elit at euismod interdum gravida.
-                </p>
-
-              </div>
-            </div>
+              title={`Number Of ${idx + 1}`}
+              description={"Lorem ipsum dolor sit amet consectetur. Lectus elit at euismod interdum gravida."}
+              icon={<ParkOutlineBridgeIcon />}
+            />
           ))}
         </div>
       </div>
