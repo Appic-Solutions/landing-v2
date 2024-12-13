@@ -1,12 +1,15 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function HeroBanner() {
   return (
-    <section className={cn(
-      "relative h-[calc(100vh-100px)] w-full",
-      "flex flex-col justify-center gap-y-12",
-      "md:items-center md:gap-y-16 lg:h-screen lg:gap-y-9"
-    )}>
+    <section
+      id="HeroBanner"
+      className={cn(
+        "relative h-[calc(100vh-100px)] w-full",
+        "flex flex-col justify-center gap-y-12",
+        "md:items-center md:gap-y-16 lg:h-screen lg:gap-y-9"
+      )}>
       <div className={cn(
         "text-[53px] leading-[58px] pl-9",
         "*:bg-clip-text *:text-transparent *:max-w-fit *:md:mx-auto",
@@ -14,7 +17,14 @@ export default function HeroBanner() {
       )}>
         <p className="bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]">Discover</p>
         <p className="bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]">Appic Crosschain</p>
-        <p className="bg-[linear-gradient(90deg,_#1C68F8_0%,_#113D92_100%)]">Swap on ICP</p>
+        {/* <p className="bg-[linear-gradient(90deg,_#1C68F8_0%,_#113D92_100%)]">Swap on ICP</p> */}
+        <div className="flex items-center justify-center h-[76px]">
+          <svg className="Title-Svg">
+            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
+              Swap On ICP
+            </text>
+          </svg>
+        </div>
       </div>
 
       <div className={cn(
@@ -22,7 +32,6 @@ export default function HeroBanner() {
         "sm:flex-row md:text-base",
         "*:h-12 *:w-[157px] *:rounded-[16px] *:backdrop-blur-[30px] *:md:h-[60px] *:md:w-[191px] *:md:rounded-[20px]"
       )}>
-
         <div className="bg-[linear-gradient(124.44deg,#4C4C4C_18.37%,rgba(57,57,57,0.3)_70.34%)] flex items-center justify-center">
           <button className={cn(
             "h-[46px] w-[155px] rounded-[16px]",
@@ -39,7 +48,9 @@ export default function HeroBanner() {
         </button>
       </div>
 
-      <div className="flex items-center justify-center gap-x-2 text-white absolute inset-x-0 bottom-0 lg:bottom-12">
+      <Link
+        href={"#Customers"}
+        className="flex items-center justify-center gap-x-2 text-white absolute inset-x-0 bottom-0 lg:bottom-12">
         <div className="text-xs md:text-base font-medium">
           <p>Scroll</p>
           <p>Down</p>
@@ -54,8 +65,8 @@ export default function HeroBanner() {
           <span style={{ animationDelay: "0.2s" }}></span>
           <span style={{ animationDelay: "0.4s" }}></span>
         </div>
-      </div>
+      </Link>
 
-    </section>
+    </section >
   )
 }

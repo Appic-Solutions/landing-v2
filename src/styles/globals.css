@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* swiper */
 .swiper-wrapper {
   height: auto !important;
@@ -14,5 +18,38 @@
 @media (max-width: 767px) {
   .swiper-wrapper {
     height: 100% !important;
+  }
+}
+
+.Title-Svg {
+  font-family: "Russo One", sans-serif;
+  position: absolute;
+  width: 390px;
+  height: 10076px;
+}
+.Title-Svg text {
+  text-transform: uppercase;
+  animation: stroke 5s both alternate;
+  stroke-width: 2;
+  font-size: 64px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgba(54, 95, 160, 1);
+  }
+  100% {
+    fill: rgba(72, 138, 204, 1);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
   }
 }

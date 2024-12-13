@@ -3,7 +3,9 @@ import TimeLine from "./timeline";
 
 export default function RoadmapSection() {
   return (
-    <section className={cn("flex flex-col gap-y-14 xl:gap-y-40")}>
+    <section
+      id="Roadmap"
+      className="scroll-mt-24 flex flex-col gap-y-14 xl:gap-y-40 lg:scroll-mt-32">
       <div
         className={cn(
           "w-full max-w-[1200px] mx-auto px-6",

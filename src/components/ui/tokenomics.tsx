@@ -5,10 +5,11 @@ import { ParkOutlineBridgeIcon } from "../icons";
 export default function TokenomicsSection() {
   return (
     <section
+      id="Tokenomics"
       className={cn(
-        "w-full max-w-[1200px] mx-auto mt-24 mb-32 px-6",
+        "scroll-mt-24 w-full max-w-[1200px] mx-auto mt-24 mb-32 px-6",
         "flex flex-col gap-y-14 xl:gap-y-28",
-        "md:my-36 xl:my-44 xl:px-0"
+        "md:my-36 lg:scroll-mt-32 xl:my-44 xl:px-0"
       )}
     >
       <div

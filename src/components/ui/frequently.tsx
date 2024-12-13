@@ -9,11 +9,13 @@ export default function FrequentlySection() {
   const [activeFaqItem, setActiveFaqItem] = useState(0)
 
   return (
-    <section className={cn(
-      "w-full max-w-[1200px] mx-auto px-6 my-20 mt-32",
-      "flex flex-col gap-y-16 gap-x-14",
-      "md:mb-48 md:mt-36 lg:mt-64 lg:flex-row xl:px-0"
-    )}>
+    <section
+      id="FAQs"
+      className={cn(
+        "scroll-mt-24 w-full max-w-[1200px] mx-auto px-6 my-20 mt-32",
+        "flex flex-col gap-y-16 gap-x-14",
+        "md:mb-48 md:mt-36 lg:scroll-mt-64 lg:mt-64 lg:flex-row xl:px-0"
+      )}>
 
 
       <div className="flex flex-col gap-y-10 xl:min-w-[480px] lg:gap-y-20 lg:max-h-fit">

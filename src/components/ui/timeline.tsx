@@ -8,13 +8,14 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 const TimeLine = () => {
-  const [activeDot, setActiveDot] = useState<number>(0);
+  const [activeDot, setActiveDot] = useState<number>(1);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     mode: "snap",
     slideChanged(e) {
       setActiveDot(e.track.details.rel);
     },
+    initial: 1,
     slides: {
       origin: "center",
       perView: 2,

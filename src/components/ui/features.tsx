@@ -4,11 +4,13 @@ import { ParkOutlineBridgeIcon } from "../icons";
 
 export default function FeaturesSection() {
   return (
-    <section className={cn(
-      "overflow-hidden w-full max-w-[1200px] mx-auto px-6",
-      "flex flex-col items-center justify-center gap-y-28 gap-x-16",
-      "xl:flex-row xl:items-end xl:px-0"
-    )}>
+    <section
+      id="Features"
+      className={cn(
+        "scroll-mt-24 overflow-clip w-full max-w-[1200px] mx-auto px-6",
+        "flex flex-col items-center justify-center gap-y-28 gap-x-16",
+        "lg:scroll-mt-32 xl:flex-row xl:items-end xl:px-0"
+      )}>
 
       <div className={cn(
         "w-full flex flex-col gap-y-16",
