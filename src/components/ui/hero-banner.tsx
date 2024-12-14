@@ -1,15 +1,17 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import BubbleShapesSection from "./bubble-shapes";
 
 export default function HeroBanner() {
   return (
     <section
       id="HeroBanner"
       className={cn(
-        "relative h-[calc(100vh-100px)] w-full",
+        "relative h-[calc(100vh-100px)] w-full overflow-clip",
         "flex flex-col justify-center gap-y-12",
         "md:items-center md:gap-y-16 lg:h-screen lg:gap-y-9"
       )}>
+      <BubbleShapesSection />
       <div className={cn(
         "text-[53px] leading-[58px] pl-9",
         "*:bg-clip-text *:text-transparent *:max-w-fit *:md:mx-auto",
@@ -17,14 +19,23 @@ export default function HeroBanner() {
       )}>
         <p className="bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]">Discover</p>
         <p className="bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]">Appic Crosschain</p>
-        <p className="bg-[linear-gradient(90deg,_#1C68F8_0%,_#113D92_100%)]">Swap on ICP</p>
-        {/* <div className="flex items-center justify-center h-[76px]">
-          <svg className="Title-Svg">
-            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-              Swap On ICP
-            </text>
-          </svg>
-        </div> */}
+        <svg
+          viewBox="0 0 390 90"
+          className="flex items-center justify-end max-w-fit w-[300px] md:w-96"
+        >
+          <text
+            x="50%"
+            y="50%"
+            dy=".35em"
+            textAnchor="middle"
+            className="animate-text-stroke text-[64px]"
+            stroke="url(#textGradient)"
+            fill="none"
+            strokeWidth="2"
+          >
+            Swap On ICP
+          </text>
+        </svg>
       </div>
 
       <div className={cn(

@@ -10,7 +10,7 @@ export default function CustomersSection() {
         "md:grid-cols-3 md:mb-44 lg:scroll-mt-32"
       )}>
 
-      <div className="w-[200%] animate-infinite-slider flex items-center justify-center gap-x-5">
+      <div className="w-[200%] animate-infinite-slider flex items-center justify-center gap-x-12">
         {Array.from({ length: 16 }).map((_, idx) => (
           <div
             key={idx}
