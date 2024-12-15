@@ -10,12 +10,7 @@ export default function BubbleShapesSection() {
     y: 0,
   });
 
-  const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
-    // Ensure the component is client-side
-    setIsClient(true);
-
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       setMousePosition({ x: clientX, y: clientY });
@@ -29,14 +24,9 @@ export default function BubbleShapesSection() {
   }, []);
 
   const calculateLimitedMovement = (value: number, factor: number): number => {
-    const limitedValue = Math.min(Math.max(value / factor, -10), 10);
+    const limitedValue = Math.min(Math.max(value / factor, -5), 5);
     return limitedValue;
   };
-
-  if (!isClient) {
-    // Prevent rendering until the component is hydrated
-    return null;
-  }
 
   return (
     <div className="hidden absolute inset-0 z-[-1] lg:block">
@@ -56,6 +46,7 @@ export default function BubbleShapesSection() {
             key={idx}
             className={cn(
               "absolute rounded-full bg-[linear-gradient(322.44deg,rgba(17,61,146,_0.3)_14.48%,rgba(255,255,255,_0.3)_94.54%)] opacity-65 border border-white/15"
+              // "animate-float"
             )}
             style={{
               width,
@@ -64,18 +55,16 @@ export default function BubbleShapesSection() {
               bottom: positionBottom,
               right: positionRight,
               left: positionLeft,
-              transform: isClient
-                ? `translate(
-                  ${calculateLimitedMovement(
-                    mousePosition.x - window.innerWidth / 2,
-                    idx + 1
-                  )}px,
-                  ${calculateLimitedMovement(
-                    mousePosition.y - window.innerHeight / 2,
-                    idx + 1
-                  )}px
-                )`
-                : undefined,
+              transform: `translate(
+                ${calculateLimitedMovement(
+                  mousePosition.x - window.innerWidth / 2,
+                  idx + 1
+                )}px,
+                ${calculateLimitedMovement(
+                  mousePosition.y - window.innerHeight / 2,
+                  idx + 1
+                )}px
+              )`,
               transition: "transform 1s ease-out",
             }}
           />
