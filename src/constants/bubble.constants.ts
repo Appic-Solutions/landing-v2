@@ -1,10 +1,10 @@
 export interface ShapeSize {
-  width: string
-  height: string
-  positionTop?: string
-  positionBottom?: string
-  positionRight?: string
-  positionLeft?: string
+  width: string;
+  height: string;
+  positionTop?: string;
+  positionBottom?: string;
+  positionRight?: string;
+  positionLeft?: string;
 }
 
 export const Bubble_Items: ShapeSize[] = [
@@ -57,4 +57,4 @@ export const Bubble_Items: ShapeSize[] = [
     width: "101px",
     height: "101px",
   },
-]
+];
