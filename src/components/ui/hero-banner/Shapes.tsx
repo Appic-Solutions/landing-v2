@@ -1,10 +1,8 @@
-"use client";
-
+import React, { useEffect, useState } from "react";
 import { Bubble_Items } from "@/constants/bubble.constants";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 
-export default function BubbleShapesSection() {
+const Shapes = () => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -27,9 +25,8 @@ export default function BubbleShapesSection() {
     const limitedValue = Math.min(Math.max(value / factor, -5), 5);
     return limitedValue;
   };
-
   return (
-    <div className="hidden absolute inset-0 z-[-1] lg:block">
+    <>
       {Bubble_Items.map(
         (
           {
@@ -70,6 +67,8 @@ export default function BubbleShapesSection() {
           />
         )
       )}
-    </div>
+    </>
   );
-}
+};
+
+export default Shapes;

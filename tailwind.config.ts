@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 export default {
   content: [
@@ -53,23 +53,27 @@ export default {
         },
 
         float: {
-          '0%': { transform: 'translateY(0)' },
-          '25%': { transform: 'translateY(-10px)' },
-          '50%': { transform: 'translateY(-20px)' },
-          '75%': { transform: 'translateY(-10px)' },
-          '100%': { transform: 'translateY(0)' },
+          "0%": { transform: "translateY(0)" },
+          "25%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-20px)" },
+          "75%": { transform: "translateY(-10px)" },
+          "100%": { transform: "translateY(0)" },
         },
         scale: {
-          '0%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.2)' },
-          '100%': { transform: 'scale(1)' },
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
         },
         move: {
-          '0%': { transform: 'translate(0, 0)' },
-          '25%': { transform: 'translate(10px, -10px)' },
-          '50%': { transform: 'translate(-10px, -20px)' },
-          '75%': { transform: 'translate(-10px, 10px)' },
-          '100%': { transform: 'translate(0, 0)' },
+          "0%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(10px, -10px)" },
+          "50%": { transform: "translate(-10px, -20px)" },
+          "75%": { transform: "translate(-10px, 10px)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
       },
     },
@@ -80,10 +84,11 @@ export default {
       "infinite-slider": "infinite-slider 35s linear infinite",
       "text-stroke": "text-stroke 5s both alternate",
 
-      float: 'float 8s ease-in-out infinite',
-      scale: 'scale 6s ease-in-out infinite',
-      move: 'move 10s ease-in-out infinite',
+      float: "float 8s ease-in-out infinite",
+      scale: "scale 6s ease-in-out infinite",
+      move: "move 10s ease-in-out infinite",
+      fade: "fadeIn .5s ease-in-out",
     },
   },
   plugins: [],
-} satisfies Config
+} satisfies Config;
