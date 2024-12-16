@@ -22,7 +22,7 @@ const Shapes = () => {
   }, []);
 
   const calculateLimitedMovement = (value: number, factor: number): number => {
-    const limitedValue = Math.min(Math.max(value / factor, -5), 5);
+    const limitedValue = Math.min(Math.max(value / factor, -8), 8);
     return limitedValue;
   };
   return (
@@ -62,7 +62,7 @@ const Shapes = () => {
                   idx + 1
                 )}px
               )`,
-              transition: "transform 1s ease-out",
+              transition: "transform 0.7s ease-out",
             }}
           />
         )
