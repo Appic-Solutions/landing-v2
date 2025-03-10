@@ -1,0 +1,13 @@
+{
+  "canisters": {
+    "landing_v2": {
+      "frontend": {
+        "entrypoint": "out/index.html"
+      },
+      "source": ["out"],
+      "type": "assets",
+      "build": ["npm run build"]
+    }
+  },
+  "output_env_file": ".env"
+}
