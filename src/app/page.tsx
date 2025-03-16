@@ -1,19 +1,19 @@
-import CustomersSection from "@/components/ui/customers";
-import FeaturesSection from "@/components/ui/features";
-import FrequentlySection from "@/components/ui/frequently";
-import HeroBanner from "@/components/ui/hero-banner";
-import RoadmapSection from "@/components/ui/roadmap";
-import TokenomicsSection from "@/components/ui/tokenomics";
+import Customers from "@/views/home/components/customers";
+import Faq from "@/views/home/components/faq";
+import Features from "@/views/home/components/features";
+import HeroBanner from "@/views/home/components/hero.banner";
+import Roadmap from "@/views/home/components/roadmap";
+import Tokenomics from "@/views/home/components/tokenomics";
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
-      <CustomersSection />
-      <FeaturesSection />
-      <TokenomicsSection />
-      <RoadmapSection />
-      <FrequentlySection />
+      <Customers />
+      <Features />
+      <Tokenomics />
+      <Roadmap />
+      <Faq />
     </>
   );
 }

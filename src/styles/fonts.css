@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "RethinkSans";
+  src: url("../../public/fonts/rethink-sans/RethinkSans.woff2") format("woff2"),
+    url("../../public/fonts/rethink-sans/RethinkSans.woff") format("woff"),
+    url("../../public/fonts/rethink-sans/RethinkSans.ttf") format("truetype"),
+    format("embedded-opentype");
+  font-weight: unset;
+  font-style: normal;
+  font-display: swap;
+}

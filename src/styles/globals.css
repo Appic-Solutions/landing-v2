@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @import "./animations.css";
-html {
-  scroll-behavior: smooth;
+@import "./fonts.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
