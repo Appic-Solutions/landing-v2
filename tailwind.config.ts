@@ -75,6 +75,11 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        scroll: {
+          "100%": {
+            transform: "translate(calc(-50% - 2rem))",
+          },
+        },
       },
     },
     animation: {
@@ -83,6 +88,7 @@ export default {
       "border-move-rotate": "border-move-rotate 12s linear infinite",
       "infinite-slider": "infinite-slider 35s linear infinite",
       "text-stroke": "text-stroke 5s both alternate",
+      "infinite-scroll": "scroll 20s linear infinite",
 
       float: "float 8s ease-in-out infinite",
       scale: "scale 6s ease-in-out infinite",

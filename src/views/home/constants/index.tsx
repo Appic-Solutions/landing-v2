@@ -6,13 +6,7 @@ import {
   LockIcon,
   ParkOutlineBridgeIcon,
 } from "@/components/icon";
-import {
-  CardItem,
-  ChartDataItem,
-  CustomerSlideItem,
-  RoadmapItem,
-  ShapeItem,
-} from "../types";
+import { CardItem, ChartDataItem, RoadmapItem, ShapeItem } from "../types";
 import { ChartConfig } from "@/components/common/chart";
 
 export const BUBBLE_ITEMS: ShapeItem[] = [
@@ -67,26 +61,12 @@ export const BUBBLE_ITEMS: ShapeItem[] = [
   },
 ];
 
-export const CUSTOMERS_IMAGES: CustomerSlideItem[] = [
-  "/images/customers/Dfinity.png",
-  "/images/customers/GOlD-Dao.png",
-  "/images/customers/NF.png",
-  "/images/customers/PT.png",
-
-  "/images/customers/Dfinity.png",
-  "/images/customers/GOlD-Dao.png",
-  "/images/customers/NF.png",
-  "/images/customers/PT.png",
-
-  "/images/customers/Dfinity.png",
-  "/images/customers/GOlD-Dao.png",
-  "/images/customers/NF.png",
-  "/images/customers/PT.png",
-
-  "/images/customers/Dfinity.png",
-  "/images/customers/GOlD-Dao.png",
-  "/images/customers/NF.png",
-  "/images/customers/PT.png",
+export const CUSTOMERS_IMAGES: string[] = [
+  "/images/customers/dfinity.png",
+  "/images/customers/golddao.png",
+  "/images/customers/nfid.png",
+  "/images/customers/icphub.png",
+  "/images/customers/oicy.png",
 ];
 
 export const KEY_FEATURES: CardItem[] = [

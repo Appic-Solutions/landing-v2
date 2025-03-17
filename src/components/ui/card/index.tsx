@@ -16,6 +16,7 @@ export default function CustomCard({
       onClick={customOnClick}
       className={cn(
         "flex items-center justify-center relative overflow-hidden rounded-[20px] text-white",
+
         "before:contents-[''] before:absolute before:top-1/2 before:z-0",
         "before:translate-x-0 before:translate-y-0 before:origin-top before:animate-border-rotate",
         "before:bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(102,102,102,0.75)_50%,rgba(255,255,255,0)_100%)]",

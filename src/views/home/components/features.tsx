@@ -64,7 +64,7 @@ export default function Features() {
             ))}
           </div>
           <div>
-            <div className=" relative w-[342px] h-[700px] z-10 overflow-hidden rounded-[50px] rotate-[-4deg] translate-x-12">
+            <div className=" relative w-[342px] h-[700px] z-10 overflow-hidden rounded-[50px] rotate-[-4deg] md:rotate-0 translate-x-12 md:translate-x-0">
               <Image
                 className="absolute z-10"
                 src="/images/features/mobile-frame.png"
