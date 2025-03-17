@@ -50,7 +50,8 @@ export default function Features() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row w-full gap-16 pb-4">
-          <div className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[60%]">
+          {/* boxes */}
+          <div className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[65%] h-fit">
             {KEY_FEATURES.map((item, idx) => (
               <CustomCard
                 customOnClick={() => setActiveItem(idx + 1)}
@@ -59,53 +60,39 @@ export default function Features() {
                 description={item.desc}
                 icon={item.icon}
                 isActive={idx + 1 === activeItem}
-                className="cursor-pointer"
+                className="cursor-pointer h-fit"
               />
             ))}
           </div>
-          <div>
-            <div className=" relative w-[342px] h-[700px] z-10 overflow-hidden rounded-[50px] rotate-[-4deg] md:rotate-0 translate-x-12 md:translate-x-0">
-              <Image
-                className="absolute z-10"
-                src="/images/features/mobile-frame.png"
-                alt="mobile-frame"
-                fill
-              />
-              {KEY_FEATURES.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={cn(
-                    "absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-500",
-                    idx + 1 === activeItem
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-52"
-                  )}
-                >
-                  <Image
-                    src={item.screenshotPath!}
-                    alt={item.label}
-                    width={310}
-                    height={672}
-                    className="rounded-[40px]"
-                  />
-                </div>
-              ))}
-            </div>
+          {/* screenshots */}
+          <div className=" relative w-[342px] h-[700px] z-10 overflow-hidden rounded-[50px] rotate-[-4deg] md:rotate-0 translate-x-12 md:translate-x-0">
+            <Image
+              className="absolute z-10"
+              src="/images/features/mobile-frame.png"
+              alt="mobile-frame"
+              fill
+            />
+            {KEY_FEATURES.map((item, idx) => (
+              <div
+                key={idx}
+                className={cn(
+                  "absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-500",
+                  idx + 1 === activeItem
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-52"
+                )}
+              >
+                <Image
+                  src={item.screenshotPath!}
+                  alt={item.label}
+                  width={310}
+                  height={672}
+                  className="rounded-[40px]"
+                />
+              </div>
+            ))}
           </div>
         </div>
-        {/* <div
-          className={cn(
-            "-rotate-12 translate-x-16 flex items-center justify-center",
-            "md:rotate-0 md:translate-x-0 xl:min-w-[342px] min-h-[730px] md:min-h-0"
-          )}
-        >
-          <Image
-            src={"/images/ornaments/iphone-13-pro.png"}
-            alt=""
-            width={342}
-            height={692}
-          />
-        </div> */}
       </div>
     </section>
   );

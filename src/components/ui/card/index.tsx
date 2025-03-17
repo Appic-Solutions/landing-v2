@@ -40,7 +40,7 @@ export default function CustomCard({
       >
         <div className="flex items-center justify-between">
           <p className="text-[18px] font-bold">{label}</p>
-          <span className="flex items-center justify-center min-h-8 min-w-8 bg-white text-black rounded-full">
+          <span className="flex items-center justify-center p-1 bg-white text-black rounded-full">
             {icon}
           </span>
         </div>

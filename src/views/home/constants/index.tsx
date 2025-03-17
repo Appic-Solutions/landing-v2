@@ -1,6 +1,7 @@
 import {
   ArrowsUpDownIcon,
   BlockchainIcon,
+  DiscountIcon,
   FireIcon,
   GovernanceIcon,
   LockIcon,
@@ -73,25 +74,25 @@ export const KEY_FEATURES: CardItem[] = [
   {
     label: "Appic Crosschain Swap",
     desc: "Appic enables easy token swaps across chains like ICP, EVM, SOLANA, and BTC, using top DEXs liquidity for fast, cheap swaps. e.g., USDT on Base to ckBTC on ICP.",
-    icon: <BlockchainIcon className="min-w-5 min-h-5" />,
+    icon: <BlockchainIcon className="w-5 h-5" />,
     screenshotPath: "/images/features/swap.png",
   },
   {
     label: "Appic Bridge",
     desc: "Appic Bridge connects EVM chains to ICP, locking tokens on one side and minting wrapped versions on the other. ICP-to-EVM bridging is coming soon.",
-    icon: <ParkOutlineBridgeIcon className="min-w-5 min-h-5" />,
+    icon: <ParkOutlineBridgeIcon className="w-5 h-5" />,
     screenshotPath: "/images/features/bridge.png",
   },
   {
     label: "Appic Dex",
     desc: "Appic Dex offers fast, low-fee swaps on ICP with concentrated liquidity pools, optimized for traders and providers in one canister.",
-    icon: <ArrowsUpDownIcon className="min-w-5 min-h-5" />,
+    icon: <ArrowsUpDownIcon className="w-5 h-5" />,
     screenshotPath: "/images/features/dex.png",
   },
   {
     label: "Appic Twin Token Creator",
     desc: `Appic Twin Token Creator lets projects make wrapped "twin" tokens on ICP or EVM, bridging them  instantly. e.g., Gold token to Base.`,
-    icon: <LockIcon className="min-w-5 min-h-5" />,
+    icon: <LockIcon className="w-5 h-5" />,
     screenshotPath: "/images/features/twin-token.png",
   },
 ];
@@ -100,27 +101,25 @@ export const TOKENOMICS_ITEMS: CardItem[] = [
   {
     label: "Governance",
     desc: "Appic token holders have voting power to shape the platform’s future. They can participate in proposals and influence the roadmap by casting their votes.",
-    icon: <GovernanceIcon />,
+    icon: <GovernanceIcon className="w-5 h-5" />,
   },
   {
-    label: "Buy Back Mechanism",
+    label: "Buy Back (Burn)",
     desc: "Appic uses platform fees to buy back and burn Appic tokens. This reduces the total supply over time, aiming to maintain a deflationary token model.",
-    icon: <FireIcon />,
+    icon: <FireIcon className="w-5 h-5" />,
   },
   {
-    label: "Transaction Fee Discounts",
+    label: "Transaction Fee",
     desc: "Appic tokens can be used to pay transaction fees at a reduced rate. This offers holders a cost-saving benefit when using the platform.",
-    icon: <LockIcon />,
+    icon: <DiscountIcon className="w-5 h-5" />,
   },
 ];
 
 export const CHART_DATA: ChartDataItem[] = [
-  { name: "Pre seed", value: 3, fill: "#F15A24" },
-  { name: "Seed", value: 10, fill: "#ED1E79" },
-  { name: "Lunar Accelerator", value: 2.5, fill: "#592784" },
-  { name: "treasury", value: 45, fill: "#3B00B9" },
-  { name: "SNS", value: 28, fill: "#FBB03B" },
-  { name: "Team", value: 11.5, fill: "#932380" },
+  { name: "Treasury", value: 45, fill: "#8067DC" },
+  { name: "SNS", value: 28, fill: "#3466C6" },
+  { name: "Team", value: 11.5, fill: "#5D92F7" },
+  { name: "Investors", value: 15.5, fill: "#A367DC" },
 ];
 
 export const CHART_CONFIG: ChartConfig = {

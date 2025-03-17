@@ -5,6 +5,7 @@ import { TOKENOMICS_ITEMS } from "../constants";
 import CustomCard from "@/components/ui/card";
 import {
   ChartContainer,
+  ChartLegend,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/common/chart";
@@ -21,35 +22,90 @@ export default function Tokenomics() {
         "md:my-36 lg:scroll-mt-32 xl:my-44 xl:px-0"
       )}
     >
-      <div className="w-full flex flex-col gap-y-16 md:gap-y-14 xl:gap-y-24">
+      {/* top section */}
+      <div
+        className={cn(
+          "grid items-center place-content-center justify-items-center gap-y-12 gap-x-12",
+          "md:grid-cols-2 md:items-start md:gap-y-16 xl:gap-y-0 xl:justify-items-start"
+        )}
+      >
+        <div className="flex flex-col gap-y-8">
+          <div
+            className={cn(
+              "w-full flex flex-col items-center justify-center gap-y-2 text-center",
+              "md:gap-y-3 xl:items-start xl:gap-y-4 xl:text-left"
+            )}
+          >
+            <p
+              className={cn(
+                "text-[28px] leading-[30px] max-w-fit bg-clip-text text-transparent ",
+                "bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]",
+                "md:text-[34px] md:leading-[37px] md:mx-auto xl:text-[49px] xl:leading-[54px] xl:mx-0"
+              )}
+            >
+              Tokenomics
+            </p>
+            <p
+              className={cn(
+                "text-white text-sm leading-[18px] max-w-[293px]",
+                "md:text-[18px] md:leading-[22px] md:max-w-[354px]",
+                "xl:text-[26px] xl:leading-[31px] xl:max-w-[515px]"
+              )}
+            >
+              Appic token can be staked for rewards, used for voting on
+              Governance, applied to cover transaction fees, or to earn
+              liquidity incentives.
+            </p>
+          </div>
+          <div
+            className={cn(
+              "flex flex-col items-center justify-center gap-y-12",
+              "md:gap-y-8 md:items-start md:justify-normal",
+              "xl:gap-y-12"
+            )}
+          >
+            <p
+              className={cn(
+                "max-w-[317px] xl:max-w-[461px]",
+                "text-lg text-white xl:text-[24px] xl:leading-[29px] md:text-start text-center"
+              )}
+            >
+              Early investors have the opportunity to purchase Appic tokens at a
+              discounted rate. To take advantage of this exclusive offer and
+              join the Appic ecosystem, get in touch with us using the button
+              below.
+            </p>
+            <Link
+              href="mailto:vibes@appicdao.com"
+              className={cn(
+                "flex items-center justify-center",
+                "w-[238px] h-[60px] text-white rounded-[20px] duration-200",
+                "bg-[linear-gradient(90deg,#1C68F8_0%,#1753C5_71.5%,#113D92_100%),linear-gradient(318.8deg,rgba(255,255,255,0)_35.19%,rgba(255,255,255,0.3)_92.55%)]",
+                "hover:ring-2 hover:ring-[#113D92] hover:shadow-[0_0_20px_5px_#113D92]"
+              )}
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
         <div
           className={cn(
-            "w-full flex flex-col items-center justify-center gap-y-2 text-center",
-            "md:gap-y-3 xl:items-start xl:gap-y-4 xl:text-left"
+            "grid gap-y-5",
+            "md:grid-cols-2 md:gap-x-9 md:col-span-2 xl:col-span-1"
           )}
         >
-          <p
-            className={cn(
-              "text-[28px] leading-[30px] max-w-fit bg-clip-text text-transparent ",
-              "bg-[linear-gradient(90deg,#6E6E6E_0%,#FFFFFF_34.45%,#FFFFFF_51.67%,#6E6E6E_86.12%)]",
-              "md:text-[34px] md:leading-[37px] md:mx-auto xl:text-[49px] xl:leading-[54px] xl:mx-0"
-            )}
-          >
-            Tokenomics
-          </p>
-          <p
-            className={cn(
-              "text-white text-sm leading-[18px] max-w-[293px]",
-              "md:text-[18px] md:leading-[22px] md:max-w-[354px]",
-              "xl:text-[26px] xl:leading-[31px] xl:max-w-[515px]"
-            )}
-          >
-            Appic token can be staked for rewards, used for voting on
-            Governance, applied to cover transaction fees, or to earn liquidity
-            incentives.
-          </p>
+          {TOKENOMICS_ITEMS.map((item, idx) => (
+            <CustomCard
+              key={idx}
+              label={item.label}
+              description={item.desc}
+              icon={item.icon}
+              className={idx === 2 ? "xl:col-start-2 xl:col-end-3" : ""}
+            />
+          ))}
         </div>
       </div>
+      {/* bottom section */}
       <div
         className={cn(
           "grid items-center place-content-center justify-items-center gap-y-12 gap-x-12",
@@ -78,7 +134,8 @@ export default function Tokenomics() {
               "px-4 xl:py-12"
             )}
           >
-            <div className="sm:px-4 xl:px-12">
+            <div className="sm:px-4 xl:px-12 flex flex-col items-center">
+              <p className="text-center font-bold">Appic Token Distribution</p>
               <ChartContainer
                 config={CHART_CONFIG}
                 className="mx-auto aspect-square h-[320px]"
@@ -86,71 +143,29 @@ export default function Tokenomics() {
                 <PieChart>
                   <ChartTooltip
                     cursor={false}
+                    active={true}
                     content={
                       <ChartTooltipContent
-                        hideLabel
+                        active={true}
                         className="bg-white text-black"
                       />
                     }
                   />
+                  <ChartLegend align="center" verticalAlign="bottom" />
                   <Pie
                     data={CHART_DATA}
                     dataKey="value"
                     nameKey="name"
                     innerRadius={60}
-                    width={320}
-                    height={320}
+                    width={380}
+                    height={380}
+                    cornerRadius={16}
+                    paddingAngle={7}
                   />
                 </PieChart>
               </ChartContainer>
             </div>
           </div>
-        </div>
-        <div
-          className={cn(
-            "flex flex-col items-center justify-center gap-y-12",
-            "md:gap-y-8 md:items-start md:justify-normal",
-            "xl:gap-y-12"
-          )}
-        >
-          <p
-            className={cn(
-              "max-w-[317px] xl:max-w-[461px]",
-              "text-lg text-white xl:text-[24px] xl:leading-[29px]"
-            )}
-          >
-            Early investors have the opportunity to purchase Appic tokens at a
-            discounted rate. To take advantage of this exclusive offer and join
-            the Appic ecosystem, get in touch with us using the button below.
-          </p>
-          <Link
-            href="mailto:vibes@appicdao.com"
-            className={cn(
-              "flex items-center justify-center",
-              "w-[238px] h-[60px] text-white rounded-[20px] duration-200",
-              "bg-[linear-gradient(90deg,#1C68F8_0%,#1753C5_71.5%,#113D92_100%),linear-gradient(318.8deg,rgba(255,255,255,0)_35.19%,rgba(255,255,255,0.3)_92.55%)]",
-              "hover:ring-2 hover:ring-[#113D92] hover:shadow-[0_0_20px_5px_#113D92]"
-            )}
-          >
-            Get in Touch
-          </Link>
-        </div>
-
-        <div
-          className={cn(
-            "grid gap-y-5",
-            "md:grid-cols-2 md:gap-x-9 md:col-span-2 xl:col-span-1"
-          )}
-        >
-          {TOKENOMICS_ITEMS.map((item, idx) => (
-            <CustomCard
-              key={idx}
-              label={item.label}
-              description={item.desc}
-              icon={item.icon}
-              className={idx === 2 ? "xl:col-start-2 xl:col-end-3" : ""}
-            />
-          ))}
         </div>
       </div>
     </section>

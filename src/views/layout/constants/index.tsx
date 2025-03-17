@@ -1,5 +1,13 @@
-import { ArrowsUpDownIcon, BlockchainIcon, ParkOutlineBridgeIcon, QuestionMarkCircleIcon } from "@/components/icon";
-import { FooterNavItems, MenuNavItem } from "../types"
+import {
+  ArrowsUpDownIcon,
+  BlockchainIcon,
+  DiscordIcon,
+  ParkOutlineBridgeIcon,
+  QuestionMarkCircleIcon,
+  XIcon,
+  YoutubeIcon,
+} from "@/components/icon";
+import { FooterNavItems, MenuNavItem } from "../types";
 
 export const NAVBAR_ITEMS: MenuNavItem[] = [
   {
@@ -22,8 +30,7 @@ export const NAVBAR_ITEMS: MenuNavItem[] = [
     href: "#FAQ",
     Icon: <QuestionMarkCircleIcon className="min-w-5 min-h-5 lg:hidden" />,
   },
-]
-
+];
 
 export const FOOTER_NAV_ITEMS: FooterNavItems[] = [
   {
@@ -50,7 +57,16 @@ export const FOOTER_NAV_ITEMS: FooterNavItems[] = [
 ];
 
 export const SOCIAL_ITEMS = [
-  { img: "/images/ornaments/discord.svg", href: "https://discord.com/invite/sHa7SCgEPV" },
-  { img: "/images/ornaments/x.svg", href: "https://twitter.com/Appic_ICP" },
-  { img: "/images/ornaments/youtube.png", href: "https://youtube.com/@appicdao" },
-]
+  {
+    icon: () => <DiscordIcon className="text-[#3870DA] w-5 h-5" />,
+    href: "https://discord.com/invite/sHa7SCgEPV",
+  },
+  {
+    icon: () => <YoutubeIcon className="text-[#3870DA] w-5 h-5" />,
+    href: "https://twitter.com/Appic_ICP",
+  },
+  {
+    icon: () => <XIcon className="text-[#3870DA] w-5 h-5" />,
+    href: "https://youtube.com/@appicdao",
+  },
+];
