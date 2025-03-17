@@ -15,6 +15,7 @@ export interface CardItem {
   label: string;
   desc: string;
   icon: ReactNode;
+  screenshotPath?: string;
 }
 
 export interface ChartDataItem {

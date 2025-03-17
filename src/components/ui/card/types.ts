@@ -5,4 +5,6 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   description: string;
   icon: ReactNode;
   className?: string;
+  isActive?: boolean;
+  customOnClick?: () => void;
 }
