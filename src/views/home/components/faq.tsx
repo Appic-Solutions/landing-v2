@@ -13,8 +13,8 @@ export default function Faq() {
       id="FAQ"
       className={cn(
         "scroll-mt-24 w-full max-w-[1240px] mx-auto px-6 my-20 mt-32",
-        "flex flex-col gap-y-16 gap-x-14 items-end",
-        "md:mb-48 md:mt-36 lg:scroll-mt-64 lg:mt-64 lg:flex-row xl:px-0"
+        "flex flex-col gap-y-16 gap-x-14",
+        "md:mb-48 md:mt-36 lg:scroll-mt-64 lg:mt-64 lg:flex-row lg:items-end xl:px-0"
       )}
     >
       <div
@@ -85,14 +85,12 @@ export default function Faq() {
             className={cn(
               "flex flex-col gap-y-5 px-6 py-6 bg-[#42424280] rounded-[10px]",
               "leading-[31px] text-white cursor-pointer duration-200",
-              "md:text-[20px]",
-              activeFaqItem === idx
-                ? "min-h-fit bg-[#1343A0] backdrop-blur-[27px] drop-shadow-[0_3px_20px_5px_#651FFF33]"
-                : "h-20 overflow-hidden"
+              "md:text-[20px] overflow-hidden",
+              activeFaqItem === idx && "bg-[#1343A0] backdrop-blur-[27px] drop-shadow-[0_3px_20px_5px_#651FFF33]"
             )}
             onClick={() => setActiveFaqItem(idx)}
           >
-            <div className="flex items-center justify-between gap-x-1">
+            <div className="flex items-center justify-between gap-x-1 h-8 min-h-fit">
               {item.label}
               <ChevronDownIcon
                 className={cn(
@@ -101,7 +99,7 @@ export default function Faq() {
                 )}
               />
             </div>
-            {item.content}
+            {activeFaqItem === idx && <div>{item.content}</div>}
           </div>
         ))}
       </div>

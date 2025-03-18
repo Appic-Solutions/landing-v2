@@ -15,3 +15,7 @@ export interface FooterNavItems {
   title: string;
   items: FooterNavItem[];
 }
+export interface SocialItem {
+  icon: ReactNode;
+  href: string;
+}

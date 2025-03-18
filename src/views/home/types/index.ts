@@ -9,7 +9,10 @@ export interface ShapeItem {
   positionLeft?: string;
 }
 
-export type CustomerSlideItem = string;
+export interface CustomerSlideItem {
+  label: string;
+  logo: string;
+}
 
 export interface CardItem {
   label: string;

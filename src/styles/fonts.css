@@ -1,10 +1,21 @@
 @font-face {
-  font-family: "RethinkSans";
+  font-family: "rethink-sans";
   src: url("../../public/fonts/rethink-sans/RethinkSans.woff2") format("woff2"),
     url("../../public/fonts/rethink-sans/RethinkSans.woff") format("woff"),
     url("../../public/fonts/rethink-sans/RethinkSans.ttf") format("truetype"),
     format("embedded-opentype");
   font-weight: unset;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "rounded-mplus1c";
+  src: url("../../public/fonts/rounded-mplus-1c/RoundedMplus1c-Black.woff2") format("woff2"),
+    url("../../public/fonts/rounded-mplus-1c/RoundedMplus1c-Black.woff") format("woff"),
+    url("../../public/fonts/rounded-mplus-1c/RoundedMplus1c-Black.ttf") format("truetype"),
+    format("embedded-opentype");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

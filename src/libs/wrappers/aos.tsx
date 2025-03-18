@@ -12,5 +12,5 @@ export default function AOSWrapper({ children }: { children: ReactNode }) {
         });
     }, []);
 
-    return <>{children}</>;
+    return <div className="overflow-x-hidden">{children}</div>;
 };

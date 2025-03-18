@@ -2,12 +2,13 @@ import {
   ArrowsUpDownIcon,
   BlockchainIcon,
   DiscordIcon,
+  GithubIcon,
   ParkOutlineBridgeIcon,
   QuestionMarkCircleIcon,
   XIcon,
   YoutubeIcon,
 } from "@/components/icon";
-import { FooterNavItems, MenuNavItem } from "../types";
+import { FooterNavItems, MenuNavItem, SocialItem } from "../types";
 
 export const NAVBAR_ITEMS: MenuNavItem[] = [
   {
@@ -56,17 +57,21 @@ export const FOOTER_NAV_ITEMS: FooterNavItems[] = [
   },
 ];
 
-export const SOCIAL_ITEMS = [
+export const SOCIAL_ITEMS: SocialItem[] = [
   {
-    icon: () => <DiscordIcon className="text-[#3870DA] w-5 h-5" />,
+    icon: <DiscordIcon className="text-[#3870DA] w-5 h-5" />,
     href: "https://discord.com/invite/sHa7SCgEPV",
   },
   {
-    icon: () => <YoutubeIcon className="text-[#3870DA] w-5 h-5" />,
+    icon: <YoutubeIcon className="text-[#3870DA] w-5 h-5" />,
     href: "https://twitter.com/Appic_ICP",
   },
   {
-    icon: () => <XIcon className="text-[#3870DA] w-5 h-5" />,
+    icon: <XIcon className="text-[#3870DA] w-5 h-5" />,
     href: "https://youtube.com/@appicdao",
+  },
+  {
+    icon: <GithubIcon className="text-[#3870DA] w-5 h-5" />,
+    href: "https://github.com/appic-solutions",
   },
 ];

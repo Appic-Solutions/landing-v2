@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "rethink-sans": "rethink-sans",
+        "rounded-mplus": "rounded-mplus1c",
+      },
       keyframes: {
         "scroll-button-effect": {
           "0%": { opacity: "0" },
@@ -21,10 +25,6 @@ export default {
         "border-move-rotate": {
           "0%": { "offset-distance": "0%" },
           "100%": { "offset-distance": "100%" },
-        },
-        "infinite-slider": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
         },
         "text-stroke": {
           "0%": {
@@ -51,30 +51,6 @@ export default {
             strokeWidth: "3",
           },
         },
-
-        float: {
-          "0%": { transform: "translateY(0)" },
-          "25%": { transform: "translateY(-10px)" },
-          "50%": { transform: "translateY(-20px)" },
-          "75%": { transform: "translateY(-10px)" },
-          "100%": { transform: "translateY(0)" },
-        },
-        scale: {
-          "0%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.2)" },
-          "100%": { transform: "scale(1)" },
-        },
-        move: {
-          "0%": { transform: "translate(0, 0)" },
-          "25%": { transform: "translate(10px, -10px)" },
-          "50%": { transform: "translate(-10px, -20px)" },
-          "75%": { transform: "translate(-10px, 10px)" },
-          "100%": { transform: "translate(0, 0)" },
-        },
-        fadeIn: {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
         scroll: {
           "100%": {
             transform: "translate(calc(-50% - 2rem))",
@@ -83,17 +59,11 @@ export default {
       },
     },
     animation: {
-      "scroll-button-effect-animate": "scroll-button-effect 2.5s infinite",
       "border-rotate": "border-rotate 5s linear forwards infinite",
-      "border-move-rotate": "border-move-rotate 12s linear infinite",
-      "infinite-slider": "infinite-slider 35s linear infinite",
-      "text-stroke": "text-stroke 5s both alternate",
       "infinite-scroll": "scroll 20s linear infinite",
-
-      float: "float 8s ease-in-out infinite",
-      scale: "scale 6s ease-in-out infinite",
-      move: "move 10s ease-in-out infinite",
-      fade: "fadeIn .5s ease-in-out",
+      "text-stroke": "text-stroke 5s both alternate",
+      "border-move-rotate": "border-move-rotate 12s linear infinite",
+      "scroll-button-effect-animate": "scroll-button-effect 2.5s infinite",
     },
   },
   plugins: [],

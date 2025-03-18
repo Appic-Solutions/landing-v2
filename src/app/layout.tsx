@@ -14,11 +14,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" className="bg-black font-rethink-sans">
       <body className="relative max-w-[1920px] mx-auto">
+        <HeaderSection />
         <AOSWrapper>
-          <HeaderSection />
           {children}
-          <FooterSection />
         </AOSWrapper>
+        <FooterSection />
       </body>
     </html>
   );

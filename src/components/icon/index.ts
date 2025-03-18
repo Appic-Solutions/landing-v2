@@ -13,3 +13,4 @@ export { default as DiscordIcon } from "./discord";
 export { default as YoutubeIcon } from "./youtube";
 export { default as XIcon } from "./x";
 export { default as DiscountIcon } from "./discount";
+export { default as GithubIcon } from "./github";

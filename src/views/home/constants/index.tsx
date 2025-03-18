@@ -7,7 +7,7 @@ import {
   LockIcon,
   ParkOutlineBridgeIcon,
 } from "@/components/icon";
-import { CardItem, ChartDataItem, RoadmapItem, ShapeItem } from "../types";
+import { CardItem, ChartDataItem, CustomerSlideItem, RoadmapItem, ShapeItem } from "../types";
 import { ChartConfig } from "@/components/common/chart";
 
 export const BUBBLE_ITEMS: ShapeItem[] = [
@@ -62,12 +62,27 @@ export const BUBBLE_ITEMS: ShapeItem[] = [
   },
 ];
 
-export const CUSTOMERS_IMAGES: string[] = [
-  "/images/customers/dfinity.png",
-  "/images/customers/golddao.png",
-  "/images/customers/nfid.png",
-  "/images/customers/icphub.png",
-  "/images/customers/oicy.png",
+export const CUSTOMERS_IMAGES: CustomerSlideItem[] = [
+  {
+    label: "DFINITY",
+    logo: "/images/logo/icp-logo.png",
+  },
+  {
+    label: "ICPHUB PT",
+    logo: "/images/logo/icp-pt.png",
+  },
+  {
+    label: "GOLD DAO",
+    logo: "/images/logo/gldt.svg",
+  },
+  {
+    label: "NFID",
+    logo: "/images/logo/nfid.png",
+  },
+  {
+    label: "OICY",
+    logo: "/images/logo/oicy.png",
+  },
 ];
 
 export const KEY_FEATURES: CardItem[] = [

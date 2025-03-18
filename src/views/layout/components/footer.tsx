@@ -29,7 +29,7 @@ export default function FooterSection() {
               href={item.href}
               className="bg-[#424242] p-2 rounded-full"
             >
-              <item.icon />
+              {item.icon}
             </Link>
           ))}
         </div>

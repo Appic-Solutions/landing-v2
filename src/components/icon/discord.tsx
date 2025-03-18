@@ -1,5 +1,4 @@
-export default function DiscordIcon({
-  ...props
+export default function DiscordIcon({ ...props
 }: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

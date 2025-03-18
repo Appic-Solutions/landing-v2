@@ -18,7 +18,7 @@ export default function HeroBanner() {
             )}>
             <Bubbles />
             <div className={cn(
-                "text-[48px] leading-[58px] pl-9",
+                "text-[48px] leading-[58px] pl-6",
                 "*:bg-clip-text *:text-transparent *:max-w-fit *:md:mx-auto",
                 "md:text-[64px] md:leading-[71px] md:pl-0 lg:text-[69px] lg:leading-[76px]"
             )}>
