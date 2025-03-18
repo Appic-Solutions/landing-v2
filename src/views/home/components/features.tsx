@@ -90,6 +90,7 @@ export default function Features() {
                   width={310}
                   height={672}
                   className="rounded-[40px]"
+                  quality={100}
                 />
               </div>
             ))}
