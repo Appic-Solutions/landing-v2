@@ -13,13 +13,13 @@ export default function Faq() {
       id="FAQ"
       className={cn(
         "scroll-mt-24 w-full max-w-[1240px] mx-auto px-6 my-20 mt-32",
-        "flex flex-col gap-y-16 gap-x-14",
+        "flex flex-col gap-y-16 gap-x-14 overflow-hidden",
         "md:mb-48 md:mt-36 lg:scroll-mt-64 lg:mt-64 lg:flex-row lg:items-end xl:px-0"
       )}
     >
       <div
         data-aos="fade-up-right"
-        className="flex flex-col gap-y-10 xl:min-w-[480px] lg:gap-y-20 lg:max-h-fit">
+        className="flex flex-col gap-y-10 xl:min-w-[480px] lg:gap-y-20 lg:max-h-fit overflow-hidden">
         <div
           className={cn(
             "w-full flex flex-col justify-center gap-y-3",
@@ -78,7 +78,7 @@ export default function Faq() {
       {/* faq contents */}
       <div
         data-aos="fade-up-left"
-        className="flex flex-col gap-y-10 flex-1">
+        className="flex flex-col gap-y-10 flex-1 overflow-hidden">
         {FAQ_ITEMS[activeFaq].items.map((item, idx) => (
           <div
             key={idx}

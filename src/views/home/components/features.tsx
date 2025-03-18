@@ -53,7 +53,7 @@ export default function Features() {
           {/* boxes */}
           <div
             data-aos="fade-right"
-            className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[65%] h-fit">
+            className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[65%] h-fit overflow-hidden">
             {KEY_FEATURES.map((item, idx) => (
               <CustomCard
                 customOnClick={() => setActiveItem(idx + 1)}
