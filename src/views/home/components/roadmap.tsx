@@ -24,6 +24,7 @@ export default function Roadmap() {
   return (
     <section
       id="Roadmap"
+      data-aos="fade-up"
       className="scroll-mt-24 flex flex-col gap-y-14 xl:gap-y-40 lg:scroll-mt-32"
     >
       <div
@@ -79,7 +80,7 @@ export default function Roadmap() {
                   "min-w-6 min-h-6 max-w-6 max-h-6 border border-white rounded-full bg-black",
                   idx < activeDot && "bg-white",
                   activeDot === idx &&
-                    "bg-[#3870DA] shadow-[0_0_20px_0_#2563eb]"
+                  "bg-[#3870DA] shadow-[0_0_20px_0_#2563eb]"
                 )}
               />
             </div>

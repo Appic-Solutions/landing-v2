@@ -17,8 +17,8 @@ export default function HeaderSection() {
           .map((entry) => entry.target.id);
 
         if (visibleSections.includes("HeroBanner") || visibleSections.includes("Customers")) {
-          setActiveSection("#Features");
-          history.replaceState(null, "", "#Features");
+          setActiveSection("#HeroBanner");
+          history.replaceState(null, "", "#HeroBanner");
         } else if (visibleSections.length > 0) {
           const firstVisible = `#${visibleSections[0]}`;
           setActiveSection(firstVisible);

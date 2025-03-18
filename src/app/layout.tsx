@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { ReactNode } from "react";
 import HeaderSection from "@/views/layout/components/header";
 import FooterSection from "@/views/layout/components/footer";
+import AOSWrapper from "@/libs/wrappers/aos";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +14,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" className="bg-black font-rethink-sans">
       <body className="relative max-w-[1920px] mx-auto">
-        <HeaderSection />
-        {children}
-        <FooterSection />
+        <AOSWrapper>
+          <HeaderSection />
+          {children}
+          <FooterSection />
+        </AOSWrapper>
       </body>
     </html>
   );

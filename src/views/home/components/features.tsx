@@ -51,7 +51,9 @@ export default function Features() {
         </div>
         <div className="flex flex-col md:flex-row w-full gap-16 pb-4">
           {/* boxes */}
-          <div className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[65%] h-fit">
+          <div
+            data-aos="fade-right"
+            className="md:col-span-7 grid gap-10 md:grid-cols-2 w-full md:w-[65%] h-fit">
             {KEY_FEATURES.map((item, idx) => (
               <CustomCard
                 customOnClick={() => setActiveItem(idx + 1)}

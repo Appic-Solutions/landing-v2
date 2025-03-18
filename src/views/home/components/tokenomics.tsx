@@ -29,7 +29,7 @@ export default function Tokenomics() {
           "md:grid-cols-2 md:items-start md:gap-y-16 xl:gap-y-0 xl:justify-items-start"
         )}
       >
-        <div className="flex flex-col gap-y-8">
+        <div data-aos="fade-up-right" className="flex flex-col gap-y-8">
           <div
             className={cn(
               "w-full flex flex-col items-center justify-center gap-y-2 text-center",
@@ -89,6 +89,7 @@ export default function Tokenomics() {
           </div>
         </div>
         <div
+          data-aos="fade-up-left"
           className={cn(
             "grid gap-y-5",
             "md:grid-cols-2 md:gap-x-9 md:col-span-2 xl:col-span-1"
@@ -107,11 +108,11 @@ export default function Tokenomics() {
       </div>
       {/* bottom section */}
       <div
+        data-aos="fade-up"
         className={cn(
           "grid items-center place-content-center justify-items-center gap-y-12 gap-x-12",
           "md:grid-cols-2 md:items-start md:gap-y-16 xl:gap-y-0 xl:justify-items-start"
-        )}
-      >
+        )}>
         <div
           className={cn(
             "flex items-center justify-center relative overflow-hidden rounded-[40px] text-white",

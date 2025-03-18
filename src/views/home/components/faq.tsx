@@ -13,11 +13,13 @@ export default function Faq() {
       id="FAQ"
       className={cn(
         "scroll-mt-24 w-full max-w-[1240px] mx-auto px-6 my-20 mt-32",
-        "flex flex-col gap-y-16 gap-x-14 items-baseline",
+        "flex flex-col gap-y-16 gap-x-14 items-end",
         "md:mb-48 md:mt-36 lg:scroll-mt-64 lg:mt-64 lg:flex-row xl:px-0"
       )}
     >
-      <div className="flex flex-col gap-y-10 xl:min-w-[480px] lg:gap-y-20 lg:max-h-fit">
+      <div
+        data-aos="fade-up-right"
+        className="flex flex-col gap-y-10 xl:min-w-[480px] lg:gap-y-20 lg:max-h-fit">
         <div
           className={cn(
             "w-full flex flex-col justify-center gap-y-3",
@@ -55,7 +57,7 @@ export default function Faq() {
                 "bg-[linear-gradient(90deg,rgba(217,217,217,_0.7)_0%,rgba(115,115,115,_0.9)_100%)]",
                 "xl:text-[24px] xl:font-semibold xl:leading-[31px]",
                 activeFaq === idx &&
-                  "bg-[linear-gradient(159.81deg,_#1343A0_-34.87%,rgba(19,67,160,_0.5)_151.64%)] text-white font-bold"
+                "bg-[linear-gradient(159.81deg,_#1343A0_-34.87%,rgba(19,67,160,_0.5)_151.64%)] text-white font-bold"
               )}
               onClick={() => {
                 setActiveFaq(idx);
@@ -74,7 +76,9 @@ export default function Faq() {
       </div>
 
       {/* faq contents */}
-      <div className="flex flex-col gap-y-10 flex-1">
+      <div
+        data-aos="fade-up-left"
+        className="flex flex-col gap-y-10 flex-1">
         {FAQ_ITEMS[activeFaq].items.map((item, idx) => (
           <div
             key={idx}
