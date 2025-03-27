@@ -68,7 +68,7 @@ export const CUSTOMERS_IMAGES: CustomerSlideItem[] = [
     logo: "/images/logo/icp-logo.png",
   },
   {
-    label: "ICPHUB PT",
+    label: "PT ICP HUB",
     logo: "/images/logo/icp-pt.png",
   },
   {
@@ -80,7 +80,7 @@ export const CUSTOMERS_IMAGES: CustomerSlideItem[] = [
     logo: "/images/logo/nfid.png",
   },
   {
-    label: "OICY",
+    label: "OISY",
     logo: "/images/logo/oicy.png",
   },
 ];
