@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./animations.css";
 @import "./fonts.css";
 
 @layer base {
