@@ -10,7 +10,6 @@ export default function CustomCard({
   className,
   ...props
 }: CardProps) {
-  console.log("active:", isActive, "label:", label);
   return (
     <div
       onClick={customOnClick}

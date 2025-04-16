@@ -55,11 +55,11 @@ export const SOCIAL_ITEMS: SocialItem[] = [
   },
   {
     icon: <YoutubeIcon className="text-[#3870DA] w-5 h-5" />,
-    href: "https://twitter.com/Appic_ICP",
+    href: "https://youtube.com/@appicdao",
   },
   {
     icon: <XIcon className="text-[#3870DA] w-5 h-5" />,
-    href: "https://youtube.com/@appicdao",
+    href: "https://twitter.com/Appic_ICP",
   },
   {
     icon: <GithubIcon className="text-[#3870DA] w-5 h-5" />,
