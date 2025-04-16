@@ -1,13 +1,4 @@
-import {
-  ArrowsUpDownIcon,
-  BlockchainIcon,
-  DiscordIcon,
-  GithubIcon,
-  ParkOutlineBridgeIcon,
-  QuestionMarkCircleIcon,
-  XIcon,
-  YoutubeIcon,
-} from "@/components/icon";
+import { ArrowsUpDownIcon, BlockchainIcon, DiscordIcon, GithubIcon, ParkOutlineBridgeIcon, QuestionMarkCircleIcon, XIcon, YoutubeIcon } from "@/components/icon";
 import { FooterNavItems, MenuNavItem, SocialItem } from "../types";
 
 export const NAVBAR_ITEMS: MenuNavItem[] = [
@@ -40,7 +31,7 @@ export const FOOTER_NAV_ITEMS: FooterNavItems[] = [
       { label: "Bridge (live)", href: "https://app.appicdao.com/bridge" },
       { label: "Swap (coming soon)", href: null },
       { label: "Pools (coming soon)", href: null },
-      { label: "Aenean facilisis", href: "https://app.appicdao.com/advanced" },
+      { label: "Twin Token Creator", href: "https://app.appicdao.com/advanced" },
     ],
   },
   {
